@@ -4,6 +4,7 @@ from posts.models import Post, Comment
 
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
+    # provides user to see 'children' comments
     comments = serializers.HyperlinkedRelatedField(
         many=True, view_name='comment-detail', read_only=True
     )

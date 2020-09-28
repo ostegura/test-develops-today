@@ -9,12 +9,14 @@ from rest_framework.decorators import action, api_view
 from rest_framework import viewsets
 from rest_framework.reverse import reverse
 from rest_framework import permissions
-# Create your views here.
+
+""" Also views can be rewritten with class-based views
+    and binded manually in urls.py
+"""
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    # This viewset automatically provides CRUD actions.
-
+    # This type of viewsets automatically provides CRUD actions.
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (permissions.AllowAny,)
@@ -36,6 +38,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.AllowAny,)
 
 
+# gives lists of posts/comments on root page
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({

@@ -7,6 +7,8 @@ from .models import Post
 
 logger = get_task_logger(__name__)
 
+# sets core settings for periodic task
+
 
 @periodic_task(
     run_every=(crontab(minute='0', hour='0')),
