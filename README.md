@@ -3,7 +3,7 @@
 `git clone https://github.com/ostegura/test-develops-today.git`
 
 ### Step 2:
-cd to repository directory and run `virtualenv --python=python venv` **install for python 3.7.x**
+cd to repository directory and run `virtualenv --python=python venv` **(install for python 3.7.x)**
 
 ### Step 3:
 cd to root directory
@@ -34,3 +34,6 @@ cd to newsBoard directory and run `python manage.py makemigrations` and `python 
 
 ### Step 8:
 `python manage.py runserver`
+
+### Step 9:
+Visit `http://127.0.0.1:8000/`
