@@ -21,7 +21,7 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     permission_classes = (permissions.AllowAny,)
 
-    @action(detail=True, name='Upvote')
+    @action(detail=True, name="Upvote")
     def post_upvote(self, request, pk=None):
         """Upvotes selected post."""
         post = Post.objects.get(pk=pk)
@@ -39,9 +39,13 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 # gives lists of posts/comments on root page
-@api_view(['GET'])
+
+
+@api_view(["GET"])
 def api_root(request, format=None):
-    return Response({
-        'posts': reverse('post-list', request=request, format=format),
-        'comments': reverse('comment-list', request=request, format=format)
-    })
+    return Response(
+        {
+            "posts": reverse("post-list", request=request, format=format),
+            "comments": reverse("comment-list", request=request, format=format),
+        }
+    )

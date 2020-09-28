@@ -6,12 +6,12 @@ from posts import views
 # create a router and register our viewsets with it
 
 # router = DefaultRouter()
-# router.register(r'posts', views.PostViewSet)
-# router.register(r'comments', views.CommentViewSet)
+# router.register(r"posts", views.PostViewSet)
+# router.register(r"comments", views.CommentViewSet)
 
 # app_name = "posts"
 # urlpatterns = [
-#     path('', include(router.urls)),
+#     path("", include(router.urls)),
 # ]
 
 post_list = views.PostViewSet.as_view({

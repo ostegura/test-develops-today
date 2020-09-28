@@ -11,16 +11,12 @@ logger = get_task_logger(__name__)
 
 
 @periodic_task(
-    run_every=(crontab(minute='0', hour='0')),
-    name="reset_upvote",
-    ignore_result=True
+    run_every=(crontab(minute="0", hour="0")), name="reset_upvote", ignore_result=True
 )
 def reset_upvote():
     try:
         # posts = Post.objects.all()
-        post_ids = list(
-            Post.objects.all()
-        ).values_list('id', flat=True)
+        post_ids = list(Post.objects.all()).values_list("id", flat=True)
 
         for post_id in post_ids:
             post = Post.objects.get(id=post_id)
