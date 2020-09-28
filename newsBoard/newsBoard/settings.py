@@ -29,7 +29,7 @@ SECRET_KEY = "+osp%u7(=hm*0q!*$#y(qypzr86k9)2n9imas$u(kq&01-ufsr"
 DEBUG = True
 # DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['test-develops-today.herokuapp.com','127.0.0.1']
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Application definition
