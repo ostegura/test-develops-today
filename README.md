@@ -1,17 +1,17 @@
 ## test-develops-today
-###Step 1:
+### Step 1:
 `git clone https://github.com/ostegura/test-develops-today.git`
 
-###Step 2:
+### Step 2:
 cd to repository directory and run `virtualenv --python=python venv` **install for python 3.7.x**
 
-###Step 3:
+### Step 3:
 cd to root directory
 
-###Step 4:
+### Step 4:
 `pip install -r requirements.txt`
 
-###Step 5:
+### Step 5:
 Run PostgreSQL with your credentials and after change it in `newsBoard/settings.py`:
 ```
 DATABASES = {
@@ -23,13 +23,14 @@ DATABASES = {
         "HOST": "localhost",
         "PORT": "5432",
     }
-}```
+}
+```
 
-###Step 6:
+### Step 6:
 cd to newsBoard directory and run `python manage.py makemigrations` and `python manage.py migrate`
 
-###Step 7:
+### Step 7:
 `python manage.py createsuperuser`
 
-###Step 8:
+### Step 8:
 `python manage.py runserver`
