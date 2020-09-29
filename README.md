@@ -1,13 +1,15 @@
 ## API endpoints
-`GET /posts` - **to get list of avalaible posts**
-`CREATE /posts` - **to create new post**
-`GET /posts/{int:pk}` - **to get post with exact id**
-`PUT /posts/{int:pk}` - **to update post with exact id**
-`PATCH /posts/{int:pk}` - **to update several fields in post with exact id**
-`DELETE /posts/{int:pk}` - **to delete post with exact id**
-`GET /posts/<int:pk>/upvote` - **to upvote exact post**
+```
+GET /posts - **to get list of avalaible posts**
+CREATE /posts - **to create new post**
+GET /posts/{int:pk} - **to get post with exact id**
+PUT /posts/{int:pk} - **to update post with exact id**
+PATCH /posts/{int:pk} - **to update several fields in post with exact id**
+DELETE /posts/{int:pk} - **to delete post with exact id**
+GET /posts/<int:pk>/upvote - **to upvote exact post**
 
-### And same endpoints for "Comments"
+**And same endpoints for "Comments"**
+```
 
 ## test-develops-today
 ### Step 1:
